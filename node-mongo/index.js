@@ -31,5 +31,5 @@ MongoClient.connect(url).then((client) => {  //db gives access to database
         console.log("Dropped Collection: ", result);
         //Step 6: Close the connection with the MongoDB server
         client.close();//client method in Mongo 3 version
-    });
-});
+    }).catch((err) => console.log(err));
+}).catch((err) => console.log(err));
